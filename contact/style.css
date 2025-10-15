@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background-color: #08100c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+header {
+    width: 100%;
+    display: flex;
+    padding: 0.5rem 1rem;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    background-color: #08100c;
+}
+
+.site_logo {
+    width: max-content;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+}
+
+.site_logo img {
+    width: 25px;
+    height: 25px;
+}
+
+.site_logo h1 {
+    font-size: 1.5rem;
+}
+
+.toggled-nav-desktop{
+    display: none;
+}
+
+.hamburger {
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.hamburger span {
+    display: block;
+    height: 5px;
+    width: 30px;
+    background-color: rgb(255, 255, 255);
+}
+
+.hamburger-first-child {
+    position: absolute;
+    top: 10px;
+    transform: rotate(45deg);
+}
+
+.hamburger-second-child {
+    opacity: 0;
+}
+
+.hamburger-third-child {
+    position: absolute;
+    bottom: 10px;
+    transform: rotate(-45deg);
+}
+
+.hamburger-span{
+    transition: all 0.5s ease;
+}
+
+/* nav container */
+
+
+.toggled-nav {
+    height: 45vh;
+    width: 100%;
+    left: -100%;
+    background-color: rgb(144, 144, 144);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    margin-top: 3rem;
+    top: 0;
+    z-index: 999;
+    transition: left 0.2s ease;
+}
+
+.navHidden{
+    left: 0;
+}
+
+nav a {
+    font-size: 1.1rem;
+    color: black;
+}
+
+main {
+    width: 100%;
+    height: auto;
+    padding-top: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-title {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+}
+
+.contact-title h1 {
+    color: orange;
+    margin-bottom: 1rem;
+}
+
+.contact-title p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    text-align: center;
+}
+
+.contact-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 3rem;
+    padding: 2rem 0;
+}
+
+/* .contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 3rem;
+    padding: 2rem 0;
+} */
+
+.contact-form,
+.contact-information {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    padding-top: 2rem;
+    gap: 1rem;
+    border-radius: 30px;
+    background-color: rgb(29, 29, 29);
+    border: none;
+
+}
+
+.contact-form h2, .contact-content h2{
+    text-align: center;
+}
+
+/* new form update */
+
+#contact-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #121212;
+    /* Dark background */
+    border-radius: 10px;
+}
+
+/* Heading and text */
+#contact-section h2,
+#contact-section p {
+    color: #fff;
+    /* White text */
+}
+
+#contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#contact-section p {
+    color: #ccc;
+    /* Softer white for paragraph */
+    margin-bottom: 20px;
+}
+
+/* Form container */
+.form-container {
+    background-color: #1e1e1e;
+    /* Slightly lighter dark shade */
+    padding: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+
+.form-group label {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+.form-group input,
+.message-box {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #333;
+    background-color: #08100c;
+    font-size: clamp(1.1rem, 2.5vw, 1.2rem);
+    border-radius: 10px;
+    outline: none;
+}
+
+.form-group input:focus,
+.message-box:focus {
+    border-color: orange;
+    background-color: black;
+
+}
+
+.message-box {
+    height: 120px;
+    min-height: 120px;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: orange;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #e67e22;
+}
+
+.contact-group {
+    height: 10vh;
+    display: flex;
+
+}
+
+.contact-icon {
+    width: 20%;
+    align-items: center;
+}
+
+#social-contact{
+    margin-top: 3rem;
+    padding-left: 5%;
+}
+
+.contact-icon img,
+.social-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.contact-icon,
+.contact-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.social-icon {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icon img {
+    filter: brightness(100) invert(1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+footer {
+    width: 100%;
+    height: 10vh;
+    background-color: #101923;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    font-size: 1.1rem;
+}
+
+/* Tablet responsiveness */
+@media screen and (min-width:500px) and (max-width:999px) {
+    header .site_logo {
+        margin-left: 1rem;
+    }
+
+    header div:last-child {
+        margin-right: 1rem;
+    }
+
+    main {
+        width: 75%;
+    }
+}
+
+/* Desktop responsiveness */
+@media screen and (min-width:1000px) {
+
+    header .site_logo {
+        margin-left: 3rem;
+    }
+
+    header div:last-child {
+        display: none;
+    }
+
+    header .toggled-nav-desktop {
+        margin-right: 5rem;
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        font-size: 1.2rem;
+
+    }
+
+    .toggled-nav-desktop a {
+        color: white;
+        transition: color 0.4s ease;
+    }
+
+    .toggled-nav-desktop a:hover {
+        color: orange;
+    }
+
+    #focused-link{
+        color: orange;
+    }
+
+    main {
+        width: 70%;
+        height: auto;
+        padding-top: 3rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+
+    .contact-form,
+.contact-information {
+    height: 90vh;
+}
+}
