@@ -249,6 +249,98 @@ footer {
     font-size: 1.1rem;
     margin-top: 21vh
 }
+/*added featured projects*/
+.featured-projects {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1.5rem;
+}
+
+.featured-heading {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.featured-heading h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.featured-heading p {
+    margin-top: 0.5rem;
+    color: rgb(180, 180, 180);
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+}
+
+.project-cards {
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.project-card {
+    background-color: rgb(29, 29, 29);
+    border-radius: 20px;
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+}
+
+.project-number {
+    color: orange;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.project-stack {
+    font-size: 0.9rem;
+    color: orange;
+    margin-bottom: 0.8rem;
+}
+
+.project-desc {
+    font-size: 0.95rem;
+    color: rgb(200, 200, 200);
+    flex-grow: 1;
+    margin-bottom: 1.2rem;
+}
+
+.project-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-links a {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+    color: orange;
+}
+
+/* Desktop: 3 cards in a row */
+@media screen and (min-width: 1000px) {
+    .project-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
 /* Tablet responsiveness */
 @media screen and (min-width:500px) and (max-width:999px) {
