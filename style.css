@@ -137,6 +137,7 @@ main .introduction {
     font-size: clamp(1rem, 2.5vw, 1.2rem);
     margin-top: 1rem;
     padding-right: 0.5rem;
+    color: rgb(180, 180, 180);
 }
 
 .introduction div {
@@ -168,7 +169,7 @@ main .introduction {
 
 .button1:hover,
 .button2:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .button1:active,
