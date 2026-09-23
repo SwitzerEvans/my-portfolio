@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evans Portfolio | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Evans Portfolio | Projects</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./projects.css">
 </head>
 
 <body>
-
 
     <header>
         <div class="site_logo">
@@ -20,11 +20,10 @@
         <div class="toggled-nav-desktop">
             <a href="../index.html">Home</a>
             <!-- <a href="#Home">Services</a> -->
-            <a id="focused-link" href="../projects/projects.html">Portfolio</a>
+            <a id="focused-link" href="./projects.html">Portfolio</a>
             <!-- <a href="#Home">Blog</a> -->
             <a href="../about/about.html">About</a>
             <a href="../contact/contact.html">Contact</a>
-
         </div>
 
         <div class="hamburger js-hamburger">
@@ -35,130 +34,97 @@
     </header>
 
     <nav class="toggled-nav js-menu-navigation">
-
         <a href="../index.html">Home</a>
         <!-- <a href="#Home">Services</a> -->
-        <a href="../projects/projects.html">Portfolio</a>
+        <a href="./projects.html">Portfolio</a>
         <!-- <a href="#Home">Blog</a> -->
         <a href="../about/about.html">About</a>
         <a href="../contact/contact.html">Contact</a>
-
     </nav>
 
-    <main>
-        <div class="portfolio-title">
-            <h1>My Portfolio</h1>
-        </div>
-
-        <div class="portfolio-intro">
+    <main class="projects-main">
+        <section class="projects-hero">
+            <span class="projects-eyebrow">Portfolio</span>
+            <h1>My Projects</h1>
             <p>
-                Explore my latest projects and see how I bring
-                creative visions to life through clean code and innovative design.
+                A collection of things I've built while learning and growing as a
+                web developer &mdash; from front-end interfaces to full-stack apps.
             </p>
-        </div>
+        </section>
 
-        <div class="project-buttons">
-            <span class="project-btn">ALL Projects</span>
-        </div>
+        <section class="project-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+            <button class="filter-btn" data-filter="frontend">Front-End</button>
+        </section>
 
-        <div class="project-cards">
-            <!-- project 1 -->
-            <div class="project-card">
-                <img src="../assets/RPS-game.png" alt="project-img">
+        <section class="project-cards project-cards-page">
 
-                <h3> Rock-Paper-Scissors Game</h3>
-                <p>A fun game built with HTML, CSS, and JavaScript.
-                    It keeps score using localStorage so your results stay even after refreshing.
-                </p>
-                <div class="description">
-                    <span>HTML, CSS & JavaScript</span>
-                    <div class="project-link">
-                        <a href="https://switzerevans.github.io/Rock-Paper-Scissors-Game/" target="_blank" id="live-btn">View Live</a>
-                        <a href="https://github.com/SwitzerEvans/Rock-Paper-Scissors-Game" target="_blank" id="code-btn">View Code</a>
-                    </div>
-                </div>
+            <div class="project-card" data-category="fullstack">
+                <img src="../assets/fintech.PNG" alt="FinPay project screenshot" class="project-img"> <!-- added image to each of the projects-->
 
-            </div>
-
-            <!-- project 2 -->
-            <div class="project-card">
-                <img src="../assets/SD-1.png" alt="project-img">
-
-                <h3>Simple Dashboard</h3>
-                <p>A clean dashboard interface designed with HTML, CSS, and a
-                    bit of JavaScript. Fully responsive and styled to look like a modern dashboard.
-                </p>
-                <div class="description">
-                    <span>HTML & CSS</span>
-                    <div>
-                        <a href="https://switzerevans.github.io/simple-dashboard/" target="_blank" id="live-btn">View Live</a>
-                        <a href="https://github.com/SwitzerEvans/simple-dashboard" target="_blank" id="code-btn">View Code</a>
-                    </div>
+                <span class="project-number">01</span>
+                <h3>FinPay</h3>
+                <p class="project-stack">PHP · MySQL · JavaScript</p>
+                <p class="project-desc">A fintech dashboard with deposits, withdrawals, balances and transaction history.</p>
+                <div class="project-links">
+                    <a href="#">View Details</a>
+                    <a href="#" target="_blank">GitHub</a>
                 </div>
             </div>
-
-            <!-- project 3 -->
-            <div class="project-card">
-                <img src="../assets/LP-1.png" alt="project-img">
-                <h3>Landing Page</h3>
-                <p>A responsive landing page project to practice
-                    layout and styling with HTML & CSS.
+            <div class="project-card" data-category="frontend">
+                <img src="../assets/switzboutique.PNG" alt="FinPay project screenshot" class="project-img">
+                
+                <span class="project-number">02</span>
+                <h3>switzBoutique</h3>
+                <p class="project-stack">HTML · CSS · JavaScript</p>
+                <p class="project-desc">
+                    A responsive e-commerce website for an online fashion store, featuring product browsing, 
+                    categories, search functionality, and an interactive shopping cart.
                 </p>
-                <div class="description">
-                    <span>HTML & CSS</span>
-                    <div>
-                        <a href="https://switzerevans.github.io/landing-page/" target="_blank" id="live-btn">View Live</a>
-                        <a href="https://github.com/SwitzerEvans/landing-page" target="_blank" id="code-btn">View Code</a>
-                    </div>
+                <div class="project-links">
+                    <a href="#">View Details</a>
+                    <a href="https://switzerevans.github.io/switzBoutique-ecommerce-site/" target="_blank">View Project</a>
+                    <a href="https://github.com/SwitzerEvans/switzBoutique-ecommerce-site" target="_blank">GitHub</a>
                 </div>
             </div>
+            <div class="project-card" data-category="fullstack">
+                <img src="../assets/schoolportal.PNG" alt="FinPay project screenshot" class="project-img">
 
-            <!-- project 4 -->
-            <div class="project-card">
-                <img src="../assets/VD-1.png" alt="project-img">
-                <h3>Video Downloader (UI Design Only)</h3>
-                <p>A front-end UI for a video downloader app. Built
-                    with HTML & CSS to practice form layout and styling.
-                    (Note: UI only, not a working downloader).
-                </p>
-                <div class="description">
-                    <span>HTML & CSS</span>
-                    <div>
-                        <a href="https://switzerevans.github.io/video-downloader/" target="_blank" id="live-btn">View Live</a>
-                        <a href="https://github.com/SwitzerEvans/video-downloader" target="_blank" id="code-btn">View Code</a>
-                    </div>
+                <span class="project-number">03</span>
+                <h3>Students Complaints Portal</h3>
+                <p class="project-stack">PHP · MYSQL · JavaScript</p>
+                <p class="project-desc">A clean, fully responsive dashboard interface styled to look like a modern admin panel.</p>
+                <div class="project-links">
+                    <a href="#">View Details</a>
+                    <a href="https://switzerevans.github.io/simple-dashboard/" target="_blank">View Project</a>
+                    <a href="https://github.com/SwitzerEvans/simple-dashboard" target="_blank">GitHub</a>
+                </div>
+            </div>
+            
+            <div class="project-card" data-category="frontend">
+                <img src="../assets/eduvista.PNG" alt="FinPay project screenshot" class="project-img">
+
+                <span class="project-number">03</span>
+                <h3>EduVista</h3>
+                <p class="project-stack">HTML · CSS · JavaScript</p>
+                <p class="project-desc">A clean, fully responsive dashboard interface styled to look like a modern admin panel.</p>
+                <div class="project-links">
+                    <a href="#">View Details</a>
+                    <a href="#" target="_blank">View Project</a>
+                    <a href="#" target="_blank">GitHub</a>
                 </div>
             </div>
 
-            <!-- project 5 -->
-            <div class="project-card">
-                <img src="../assets/QA.png" alt="project-img">
-                <h3>Quiz App</h3>
-                <p>A fun and interactive multi-page quiz built with HTML, CSS, and JavaScript. It lets users answer multiple-choice 
-                    questions, tracks their score using Local Storage, and shows the final result on a separate page. Simple, responsive, 
-                    and perfect for testing your knowledge.
-                </p>
-                <div class="description">
-                    <span>HTML, CSS & JavaScript</span>
-                    <div>
-                        <a href="https://switzerevans.github.io/Quiz-App/" target="_blank" id="live-btn">View Live</a>
-                        <a href="https://github.com/SwitzerEvans/Quiz-App" target="_blank" id="code-btn">View Code</a>
-                    </div>
-                </div>
-            </div>
-
-
-
-        </div>
-
-
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Evans. All rights reserved.</p>
+        <p>&copy; 2026 Evans. All rights reserved.</p>
     </footer>
 
     <script rel="script" src="../sript.js"></script>
+    <script rel="script" src="./projects.js"></script>
 
 </body>
 
